@@ -6,3 +6,7 @@ It's necesary to have an excel with the student's numbers, names and emails
 
 Is:
 It's necesary to have a folder filled with PDF documents with the format "studentnumber.pdf"
+
+GMAIL access to less secure apps:
+In order to allow your mailer to send mails you need to enable it on:
+https://myaccount.google.com/lesssecureapps

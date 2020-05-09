@@ -3,6 +3,7 @@
 from os import listdir
 import pandas
 from mailer import mandar_mail
+from time import sleep
 
 df = pandas.read_excel("Alumnos.xlsx")
 # print(df)
@@ -32,6 +33,13 @@ for document_name in documentos_names:
         print("------------------------------------")
         print(f"Mandando un mail a {nombre}: {mail}")
         print(f"Subiendo documento en {path}...")
-        mandar_mail(nro_alumno, mail, nombre, path)
-        print("Mandado")
+        try:
+            mandar_mail(nro_alumno, mail, nombre, path)
+            print("Mandado")
+            sleep(1)
+        except Exception as error:
+            print(error)
+            print(f"!!!NO SE HA MANDADO LA CORRECCION DE {nro_alumno}:{mail}!!!")
+            with open("ERRORS.txt", "a") as err_file:
+                err_file.write(f"!!!NO SE HA MANDADO LA CORRECCION DE {nro_alumno}:{mail}!!!\n")
         # print(document_name)
