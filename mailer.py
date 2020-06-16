@@ -13,8 +13,8 @@ from email import encoders
 # nombre = "ASD"
 
 def mandar_mail(nro_alumno, mail, nombre, file_path):
-    titulo = "IIC2133 - Corrección I1"
-    body = f"Hola {nombre},\nEsperamos que les haya ido muy bien en su I2.\nAdjunto viene tu I1 corregida.\nRecuerda que el plazo para recorregir es hasta el lunes 18 de mayo a las 23.59, mediante el cuestionario disponible en Siding.\n\nDisculpa el atraso,\nPatrick"
+    titulo = "IIC2133 - Corrección I2"
+    body = f"Hola {nombre},\nEsperamos que les haya ido muy bien en su I2.\nAdjunto viene tu I2 corregida.\nRecuerda que el plazo para recorregir es hasta el lunes 29 de junio a las 23.59, mediante el cuestionario disponible en Siding.\n\nDisculpa el atraso,\nPatrick"
 
     # Hacemos el mail
     msg = MIMEMultipart()

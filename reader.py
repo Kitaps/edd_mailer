@@ -18,8 +18,9 @@ df = pandas.read_excel("Alumnos.xlsx")
 # print(type(alumno["Nombre"]))
 # print(type(alumno["Mail"]))
 
+dir_path = "./I2"
 
-documentos_names = listdir("./I1")
+documentos_names = listdir(dir_path)
 for document_name in documentos_names:
     if ".pdf" in document_name:
         nro_alumno = document_name.replace(".pdf", "")
@@ -29,7 +30,7 @@ for document_name in documentos_names:
         alumno = alumno_aux.iloc[0]
         nombre = alumno["Nombre"]
         mail = alumno["Mail"]
-        path = f"./I1/{nro_alumno}.pdf"
+        path = f"{dir_path}/{nro_alumno}.pdf"
         print("------------------------------------")
         print(f"Mandando un mail a {nombre}: {mail}")
         print(f"Subiendo documento en {path}...")
@@ -41,5 +42,8 @@ for document_name in documentos_names:
             print(error)
             print(f"!!!NO SE HA MANDADO LA CORRECCION DE {nro_alumno}:{mail}!!!")
             with open("ERRORS.txt", "a") as err_file:
-                err_file.write(f"!!!NO SE HA MANDADO LA CORRECCION DE {nro_alumno}:{mail}!!!\n")
+                err_file.write("------------------------------------\n")
+                err_file.write(str(error))
+                err_file.write(f"\n!!!NO SE HA MANDADO LA CORRECCION DE {nro_alumno}:{mail}!!!\n")
+                err_file.write("------------------------------------\n")
         # print(document_name)
