@@ -44,5 +44,5 @@ def mandar_mail(nro_alumno, mail, nombre, file_path):
     server.quit()
     attachment.close()
 
-if __name__ == "__main__":
-    mandar_mail(14620820, "paliedtke@uc.cl", "Patrick")
+# if __name__ == "__main__":
+    # mandar_mail(14620820, "paliedtke@uc.cl", "Patrick")

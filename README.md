@@ -10,3 +10,5 @@ It's necesary to have a folder filled with PDF documents with the format "studen
 GMAIL access to less secure apps:
 In order to allow your mailer to send mails you need to enable it on:
 https://myaccount.google.com/lesssecureapps
+
+main: change parameters of student directories, student files and document type and send all :)
