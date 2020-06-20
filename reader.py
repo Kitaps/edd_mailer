@@ -5,7 +5,7 @@ import pandas
 from mailer import mandar_mail
 from time import sleep
 
-def send_files(student_directions_path, student_files_path, doc_type):
+def send_files(student_directions_path, student_files_path, doc_type, subject):
 
     # df = pandas.read_excel("Alumnos.xlsx")
     df = pandas.read_excel(student_directions_path)
@@ -40,7 +40,7 @@ def send_files(student_directions_path, student_files_path, doc_type):
             print(f"Mandando un mail a {nombre}: {mail}")
             print(f"Subiendo documento en {path}...")
             try:
-                mandar_mail(nro_alumno, mail, nombre, path)
+                mandar_mail(nro_alumno, mail, nombre, path, subject, doc_type)
                 print("Mandado")
                 sleep(1)
             except Exception as error:
