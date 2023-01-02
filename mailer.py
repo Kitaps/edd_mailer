@@ -14,7 +14,7 @@ from email import encoders
 
 def mandar_mail(nro_alumno, mail, nombre, file_path, subject, doc_type):
     # titulo = "IIC2133 - Corrección I2"
-    body = f"Hola {nombre},\nDisuclpa por los errores con el envio de tu recorreccion anterior.\nAdjunto viene tu feedback.\nRecuerda que el plazo para recorregir es hasta el lunes 29 de junio a las 23.59, mediante el cuestionario disponible en Siding.\n\nGracias por tu comprension,\nPatrick"
+    body = f"Hola {nombre},\nEspero que estes bien.\nHola, adjunto te mando los comentarios de la recorreccion de la I3. Cualquier duda, favor contactar al corrector correspondiente (disponible en el archivo) durante el día de hoy.\n\nExito con el fin de semestre,\nPatrick"
 
     # Hacemos el mail
     msg = MIMEMultipart()
